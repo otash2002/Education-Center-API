@@ -8,27 +8,27 @@ export declare class ScheduleService {
         message: string;
         schedule: {
             group: {
-                schedule: string | null;
-                id: number;
-                status: import(".prisma/client").$Enums.Status;
                 createdAt: Date;
                 updatedAt: Date;
+                id: number;
                 name: string;
+                schedule: string | null;
                 courseId: number;
                 teacherId: number;
                 startDate: Date;
                 endDate: Date | null;
                 maxStudents: number;
+                status: import(".prisma/client").$Enums.Status;
             };
         } & {
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
             day: import(".prisma/client").$Enums.DayOfWeek;
-            groupId: number;
             startTime: Date;
             endTime: Date;
             roomNumber: string | null;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            groupId: number;
         };
     }>;
     findAll(): Promise<{
@@ -36,54 +36,54 @@ export declare class ScheduleService {
         count: number;
         schedules: ({
             group: {
-                schedule: string | null;
-                id: number;
-                status: import(".prisma/client").$Enums.Status;
                 createdAt: Date;
                 updatedAt: Date;
+                id: number;
                 name: string;
+                schedule: string | null;
                 courseId: number;
                 teacherId: number;
                 startDate: Date;
                 endDate: Date | null;
                 maxStudents: number;
+                status: import(".prisma/client").$Enums.Status;
             };
         } & {
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
             day: import(".prisma/client").$Enums.DayOfWeek;
-            groupId: number;
             startTime: Date;
             endTime: Date;
             roomNumber: string | null;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            groupId: number;
         })[];
     }>;
     findOne(id: number): Promise<{
         success: boolean;
         schedule: {
             group: {
-                schedule: string | null;
-                id: number;
-                status: import(".prisma/client").$Enums.Status;
                 createdAt: Date;
                 updatedAt: Date;
+                id: number;
                 name: string;
+                schedule: string | null;
                 courseId: number;
                 teacherId: number;
                 startDate: Date;
                 endDate: Date | null;
                 maxStudents: number;
+                status: import(".prisma/client").$Enums.Status;
             };
         } & {
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
             day: import(".prisma/client").$Enums.DayOfWeek;
-            groupId: number;
             startTime: Date;
             endTime: Date;
             roomNumber: string | null;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            groupId: number;
         };
     }>;
     update(id: number, updateScheduleDto: UpdateScheduleDto): Promise<{
@@ -91,27 +91,27 @@ export declare class ScheduleService {
         message: string;
         schedule: {
             group: {
-                schedule: string | null;
-                id: number;
-                status: import(".prisma/client").$Enums.Status;
                 createdAt: Date;
                 updatedAt: Date;
+                id: number;
                 name: string;
+                schedule: string | null;
                 courseId: number;
                 teacherId: number;
                 startDate: Date;
                 endDate: Date | null;
                 maxStudents: number;
+                status: import(".prisma/client").$Enums.Status;
             };
         } & {
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
             day: import(".prisma/client").$Enums.DayOfWeek;
-            groupId: number;
             startTime: Date;
             endTime: Date;
             roomNumber: string | null;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            groupId: number;
         };
     }>;
     remove(id: number): Promise<{

@@ -7,50 +7,50 @@ export declare class StudentsController {
         success: boolean;
         message: string;
         student: {
-            username: string | null;
             firstName: string;
             lastName: string;
             phone: string | null;
             address: string | null;
             birthDate: Date | null;
-            id: number;
             status: import(".prisma/client").$Enums.Status;
+            username: string | null;
+            id: number;
+            enrollmentDate: Date;
             createdAt: Date;
             updatedAt: Date;
-            enrollmentDate: Date;
         };
     }>;
     findAll(): Promise<{
         success: boolean;
         count: number;
         students: {
-            username: string | null;
             firstName: string;
             lastName: string;
             phone: string | null;
             address: string | null;
             birthDate: Date | null;
-            id: number;
             status: import(".prisma/client").$Enums.Status;
+            username: string | null;
+            id: number;
+            enrollmentDate: Date;
             createdAt: Date;
             updatedAt: Date;
-            enrollmentDate: Date;
         }[];
     }>;
     findOne(id: string, user: any): Promise<{
         success: boolean;
         student: {
-            username: string | null;
             firstName: string;
             lastName: string;
             phone: string | null;
             address: string | null;
             birthDate: Date | null;
-            id: number;
             status: import(".prisma/client").$Enums.Status;
+            username: string | null;
+            id: number;
+            enrollmentDate: Date;
             createdAt: Date;
             updatedAt: Date;
-            enrollmentDate: Date;
         };
     }>;
     remove(id: string): Promise<{

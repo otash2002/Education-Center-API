@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateGroupDto = void 0;
+const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
 class UpdateGroupDto {
     name;
@@ -22,38 +23,74 @@ class UpdateGroupDto {
 }
 exports.UpdateGroupDto = UpdateGroupDto;
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'NodeJS-001 (Kuzgi)',
+        description: 'Guruhning yangilangan nomi',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateGroupDto.prototype, "name", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 3,
+        description: 'Yangi tayinlangan o‘qituvchi ID raqami',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], UpdateGroupDto.prototype, "teacherId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: '2024-03-01',
+        description: 'O‘zgartirilgan boshlanish sanasi (YYYY-MM-DD)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsDateString)(),
     __metadata("design:type", String)
 ], UpdateGroupDto.prototype, "startDate", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: '2024-09-01',
+        description: 'O‘zgartirilgan tugash sanasi (YYYY-MM-DD)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsDateString)(),
     __metadata("design:type", String)
 ], UpdateGroupDto.prototype, "endDate", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Ses-Pay-Shanba, 14:00-16:00',
+        description: 'Yangi dars jadvali',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateGroupDto.prototype, "schedule", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 25,
+        description: 'O‘quvchilar soni limitini o‘zgartirish',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], UpdateGroupDto.prototype, "maxStudents", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'active',
+        enum: ['planned', 'active', 'completed'],
+        description: 'Guruhning joriy holati (statusi)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsEnum)(['planned', 'active', 'completed']),
     __metadata("design:type", String)
 ], UpdateGroupDto.prototype, "status", void 0);
 //# sourceMappingURL=update-group.dto.js.map

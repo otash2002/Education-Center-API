@@ -7,16 +7,16 @@ export declare class StaffsController {
         success: boolean;
         message: string;
         staff: {
-            username: string;
             firstName: string;
             lastName: string;
-            role: import(".prisma/client").$Enums.Role;
             position: string;
             phone: string | null;
             address: string | null;
+            status: import(".prisma/client").$Enums.Status;
+            username: string;
+            role: import(".prisma/client").$Enums.Role;
             id: number;
             hireDate: Date;
-            status: import(".prisma/client").$Enums.Status;
             createdAt: Date;
             updatedAt: Date;
         };
@@ -25,16 +25,16 @@ export declare class StaffsController {
         success: boolean;
         count: number;
         staffs: {
-            username: string;
             firstName: string;
             lastName: string;
-            role: import(".prisma/client").$Enums.Role;
             position: string;
             phone: string | null;
             address: string | null;
+            status: import(".prisma/client").$Enums.Status;
+            username: string;
+            role: import(".prisma/client").$Enums.Role;
             id: number;
             hireDate: Date;
-            status: import(".prisma/client").$Enums.Status;
             createdAt: Date;
             updatedAt: Date;
         }[];
@@ -42,16 +42,16 @@ export declare class StaffsController {
     findOne(id: string): Promise<{
         success: boolean;
         staff: {
-            username: string;
             firstName: string;
             lastName: string;
-            role: import(".prisma/client").$Enums.Role;
             position: string;
             phone: string | null;
             address: string | null;
+            status: import(".prisma/client").$Enums.Status;
+            username: string;
+            role: import(".prisma/client").$Enums.Role;
             id: number;
             hireDate: Date;
-            status: import(".prisma/client").$Enums.Status;
             createdAt: Date;
             updatedAt: Date;
         };

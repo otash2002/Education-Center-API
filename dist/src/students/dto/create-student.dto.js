@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateStudentDto = void 0;
+const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
 class CreateStudentDto {
     firstName;
@@ -22,34 +23,67 @@ class CreateStudentDto {
 }
 exports.CreateStudentDto = CreateStudentDto;
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Asadbek',
+        description: 'Talabaning ismi'
+    }),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateStudentDto.prototype, "firstName", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Olimov',
+        description: 'Talabaning familiyasi'
+    }),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateStudentDto.prototype, "lastName", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'asad_01',
+        description: 'Tizimga kirish uchun login (ixtiyoriy)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateStudentDto.prototype, "username", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'student123',
+        description: 'Tizimga kirish uchun parol (ixtiyoriy)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateStudentDto.prototype, "password", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: '+998911234567',
+        description: 'Talaba yoki ota-onasining telefon raqami',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsPhoneNumber)('UZ'),
     __metadata("design:type", String)
 ], CreateStudentDto.prototype, "phone", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Toshkent sh., Olmazor tumani',
+        description: 'Talabaning yashash manzili',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateStudentDto.prototype, "address", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: '2008-05-20',
+        description: 'Talabaning tug‘ilgan sanasi (YYYY-MM-DD)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsDateString)(),
     __metadata("design:type", String)

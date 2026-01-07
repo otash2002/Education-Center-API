@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateCourseDto = void 0;
+const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
 class UpdateCourseDto {
     name;
@@ -21,31 +22,62 @@ class UpdateCourseDto {
 }
 exports.UpdateCourseDto = UpdateCourseDto;
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Web Dasturlash (Update)',
+        description: 'Kursning yangi nomi',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateCourseDto.prototype, "name", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Yangi texnologiyalar qo‘shilgan kurs tavsifi',
+        description: 'Kurs haqida qo‘shimcha ma’lumot',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateCourseDto.prototype, "description", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 900000,
+        description: 'Yangi kurs narxi',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], UpdateCourseDto.prototype, "price", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 6,
+        description: 'Kurs davomiyligi (oyda)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], UpdateCourseDto.prototype, "duration", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'advanced',
+        enum: ['beginner', 'intermediate', 'advanced'],
+        description: 'Kursning qiyinchilik darajasini o‘zgartirish',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsEnum)(['beginner', 'intermediate', 'advanced']),
     __metadata("design:type", String)
 ], UpdateCourseDto.prototype, "level", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: true,
+        description: 'Kurs faolligini boshqarish (active/inactive)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsBoolean)(),
     __metadata("design:type", Boolean)

@@ -8,29 +8,29 @@ export declare class LessonsController {
         message: string;
         lesson: {
             group: {
-                schedule: string | null;
-                id: number;
-                status: import(".prisma/client").$Enums.Status;
                 createdAt: Date;
                 updatedAt: Date;
+                id: number;
                 name: string;
                 courseId: number;
                 teacherId: number;
                 startDate: Date;
                 endDate: Date | null;
+                schedule: string | null;
                 maxStudents: number;
+                status: import(".prisma/client").$Enums.Status;
             };
         } & {
             description: string | null;
             title: string | null;
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            groupId: number;
             lessonDate: Date;
             startTime: Date;
             endTime: Date;
             roomNumber: string | null;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            groupId: number;
             createdBy: number;
         };
     }>;
@@ -39,29 +39,29 @@ export declare class LessonsController {
         count: number;
         lessons: ({
             group: {
-                schedule: string | null;
-                id: number;
-                status: import(".prisma/client").$Enums.Status;
                 createdAt: Date;
                 updatedAt: Date;
+                id: number;
                 name: string;
                 courseId: number;
                 teacherId: number;
                 startDate: Date;
                 endDate: Date | null;
+                schedule: string | null;
                 maxStudents: number;
+                status: import(".prisma/client").$Enums.Status;
             };
         } & {
             description: string | null;
             title: string | null;
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            groupId: number;
             lessonDate: Date;
             startTime: Date;
             endTime: Date;
             roomNumber: string | null;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            groupId: number;
             createdBy: number;
         })[];
     }>;
@@ -69,29 +69,29 @@ export declare class LessonsController {
         success: boolean;
         lesson: {
             group: {
-                schedule: string | null;
-                id: number;
-                status: import(".prisma/client").$Enums.Status;
                 createdAt: Date;
                 updatedAt: Date;
+                id: number;
                 name: string;
                 courseId: number;
                 teacherId: number;
                 startDate: Date;
                 endDate: Date | null;
+                schedule: string | null;
                 maxStudents: number;
+                status: import(".prisma/client").$Enums.Status;
             };
         } & {
             description: string | null;
             title: string | null;
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            groupId: number;
             lessonDate: Date;
             startTime: Date;
             endTime: Date;
             roomNumber: string | null;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            groupId: number;
             createdBy: number;
         };
     }>;
@@ -100,29 +100,29 @@ export declare class LessonsController {
         message: string;
         lesson: {
             group: {
-                schedule: string | null;
-                id: number;
-                status: import(".prisma/client").$Enums.Status;
                 createdAt: Date;
                 updatedAt: Date;
+                id: number;
                 name: string;
                 courseId: number;
                 teacherId: number;
                 startDate: Date;
                 endDate: Date | null;
+                schedule: string | null;
                 maxStudents: number;
+                status: import(".prisma/client").$Enums.Status;
             };
         } & {
             description: string | null;
             title: string | null;
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            groupId: number;
             lessonDate: Date;
             startTime: Date;
             endTime: Date;
             roomNumber: string | null;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            groupId: number;
             createdBy: number;
         };
     }>;

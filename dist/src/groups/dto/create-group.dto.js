@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateGroupDto = void 0;
+const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
 class CreateGroupDto {
     name;
@@ -22,34 +23,66 @@ class CreateGroupDto {
 }
 exports.CreateGroupDto = CreateGroupDto;
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'NodeJS-001',
+        description: 'Guruhning nomi yoki kodi'
+    }),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateGroupDto.prototype, "name", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 1,
+        description: 'Bog‘lanishi kerak bo‘lgan Kurs ID raqami'
+    }),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], CreateGroupDto.prototype, "courseId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 5,
+        description: 'Dars beradigan O‘qituvchi (Staff) ID raqami'
+    }),
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], CreateGroupDto.prototype, "teacherId", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: '2024-02-01',
+        description: 'Guruh darslari boshlanish sanasi (YYYY-MM-DD)'
+    }),
     (0, class_validator_1.IsDateString)(),
     __metadata("design:type", String)
 ], CreateGroupDto.prototype, "startDate", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: '2024-08-01',
+        description: 'Guruh darslari tugash sanasi (ixtiyoriy)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsDateString)(),
     __metadata("design:type", String)
 ], CreateGroupDto.prototype, "endDate", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Dush-Sesh-Juma, 18:00-20:00',
+        description: 'Dars jadvali haqida ma’lumot',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateGroupDto.prototype, "schedule", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 20,
+        description: 'Guruhdagi maksimal o‘quvchilar soni',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(1),
     __metadata("design:type", Number)
 ], CreateGroupDto.prototype, "maxStudents", void 0);
 //# sourceMappingURL=create-group.dto.js.map

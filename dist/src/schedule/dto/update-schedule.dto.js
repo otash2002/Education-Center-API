@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateScheduleDto = void 0;
+const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
 class UpdateScheduleDto {
     day;
@@ -19,21 +20,42 @@ class UpdateScheduleDto {
 }
 exports.UpdateScheduleDto = UpdateScheduleDto;
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Friday',
+        enum: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        description: 'Dars kunini o‘zgartirish',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsEnum)(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']),
     __metadata("design:type", String)
 ], UpdateScheduleDto.prototype, "day", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: '09:00',
+        description: 'Yangi boshlanish vaqti (HH:mm)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateScheduleDto.prototype, "startTime", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: '11:00',
+        description: 'Yangi tugash vaqti (HH:mm)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateScheduleDto.prototype, "endTime", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Lab-2',
+        description: 'Dars o‘tiladigan xonani o‘zgartirish',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)

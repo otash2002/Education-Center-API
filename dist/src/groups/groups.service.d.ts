@@ -9,42 +9,42 @@ export declare class GroupsService {
         group: {
             course: {
                 description: string | null;
-                id: number;
+                name: string;
                 createdAt: Date;
                 updatedAt: Date;
-                name: string;
+                id: number;
                 price: number;
                 duration: number;
                 level: import(".prisma/client").$Enums.CourseLevel | null;
                 isActive: boolean;
             };
             teacher: {
-                username: string;
-                password: string;
+                status: import(".prisma/client").$Enums.Status;
+                createdAt: Date;
+                updatedAt: Date;
+                id: number;
                 firstName: string;
                 lastName: string;
+                username: string;
+                password: string;
                 role: import(".prisma/client").$Enums.Role;
                 position: string;
                 phone: string | null;
                 address: string | null;
-                id: number;
                 hireDate: Date;
-                status: import(".prisma/client").$Enums.Status;
-                createdAt: Date;
-                updatedAt: Date;
             };
         } & {
-            schedule: string | null;
-            id: number;
-            status: import(".prisma/client").$Enums.Status;
-            createdAt: Date;
-            updatedAt: Date;
             name: string;
-            courseId: number;
             teacherId: number;
             startDate: Date;
             endDate: Date | null;
+            schedule: string | null;
             maxStudents: number;
+            status: import(".prisma/client").$Enums.Status;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            courseId: number;
         };
     }>;
     findAll(): Promise<{
@@ -53,42 +53,42 @@ export declare class GroupsService {
         groups: ({
             course: {
                 description: string | null;
-                id: number;
+                name: string;
                 createdAt: Date;
                 updatedAt: Date;
-                name: string;
+                id: number;
                 price: number;
                 duration: number;
                 level: import(".prisma/client").$Enums.CourseLevel | null;
                 isActive: boolean;
             };
             teacher: {
-                username: string;
-                password: string;
+                status: import(".prisma/client").$Enums.Status;
+                createdAt: Date;
+                updatedAt: Date;
+                id: number;
                 firstName: string;
                 lastName: string;
+                username: string;
+                password: string;
                 role: import(".prisma/client").$Enums.Role;
                 position: string;
                 phone: string | null;
                 address: string | null;
-                id: number;
                 hireDate: Date;
-                status: import(".prisma/client").$Enums.Status;
-                createdAt: Date;
-                updatedAt: Date;
             };
         } & {
-            schedule: string | null;
-            id: number;
-            status: import(".prisma/client").$Enums.Status;
-            createdAt: Date;
-            updatedAt: Date;
             name: string;
-            courseId: number;
             teacherId: number;
             startDate: Date;
             endDate: Date | null;
+            schedule: string | null;
             maxStudents: number;
+            status: import(".prisma/client").$Enums.Status;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            courseId: number;
         })[];
     }>;
     findOne(id: number): Promise<{
@@ -96,42 +96,42 @@ export declare class GroupsService {
         group: {
             course: {
                 description: string | null;
-                id: number;
+                name: string;
                 createdAt: Date;
                 updatedAt: Date;
-                name: string;
+                id: number;
                 price: number;
                 duration: number;
                 level: import(".prisma/client").$Enums.CourseLevel | null;
                 isActive: boolean;
             };
             teacher: {
-                username: string;
-                password: string;
+                status: import(".prisma/client").$Enums.Status;
+                createdAt: Date;
+                updatedAt: Date;
+                id: number;
                 firstName: string;
                 lastName: string;
+                username: string;
+                password: string;
                 role: import(".prisma/client").$Enums.Role;
                 position: string;
                 phone: string | null;
                 address: string | null;
-                id: number;
                 hireDate: Date;
-                status: import(".prisma/client").$Enums.Status;
-                createdAt: Date;
-                updatedAt: Date;
             };
         } & {
-            schedule: string | null;
-            id: number;
-            status: import(".prisma/client").$Enums.Status;
-            createdAt: Date;
-            updatedAt: Date;
             name: string;
-            courseId: number;
             teacherId: number;
             startDate: Date;
             endDate: Date | null;
+            schedule: string | null;
             maxStudents: number;
+            status: import(".prisma/client").$Enums.Status;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            courseId: number;
         };
     }>;
     update(id: number, updateGroupDto: UpdateGroupDto): Promise<{
@@ -140,42 +140,42 @@ export declare class GroupsService {
         group: {
             course: {
                 description: string | null;
-                id: number;
+                name: string;
                 createdAt: Date;
                 updatedAt: Date;
-                name: string;
+                id: number;
                 price: number;
                 duration: number;
                 level: import(".prisma/client").$Enums.CourseLevel | null;
                 isActive: boolean;
             };
             teacher: {
-                username: string;
-                password: string;
+                status: import(".prisma/client").$Enums.Status;
+                createdAt: Date;
+                updatedAt: Date;
+                id: number;
                 firstName: string;
                 lastName: string;
+                username: string;
+                password: string;
                 role: import(".prisma/client").$Enums.Role;
                 position: string;
                 phone: string | null;
                 address: string | null;
-                id: number;
                 hireDate: Date;
-                status: import(".prisma/client").$Enums.Status;
-                createdAt: Date;
-                updatedAt: Date;
             };
         } & {
-            schedule: string | null;
-            id: number;
-            status: import(".prisma/client").$Enums.Status;
-            createdAt: Date;
-            updatedAt: Date;
             name: string;
-            courseId: number;
             teacherId: number;
             startDate: Date;
             endDate: Date | null;
+            schedule: string | null;
             maxStudents: number;
+            status: import(".prisma/client").$Enums.Status;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
+            courseId: number;
         };
     }>;
     remove(id: number): Promise<{

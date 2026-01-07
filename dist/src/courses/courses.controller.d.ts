@@ -8,14 +8,14 @@ export declare class CoursesController {
         message: string;
         course: {
             description: string | null;
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
             name: string;
             price: number;
             duration: number;
             level: import(".prisma/client").$Enums.CourseLevel | null;
             isActive: boolean;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
         };
     }>;
     findAll(): Promise<{
@@ -23,28 +23,28 @@ export declare class CoursesController {
         count: number;
         courses: {
             description: string | null;
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
             name: string;
             price: number;
             duration: number;
             level: import(".prisma/client").$Enums.CourseLevel | null;
             isActive: boolean;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
         }[];
     }>;
     findOne(id: string): Promise<{
         success: boolean;
         course: {
             description: string | null;
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
             name: string;
             price: number;
             duration: number;
             level: import(".prisma/client").$Enums.CourseLevel | null;
             isActive: boolean;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
         };
     }>;
     update(id: string, updateCourseDto: UpdateCourseDto): Promise<{
@@ -52,14 +52,14 @@ export declare class CoursesController {
         message: string;
         course: {
             description: string | null;
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
             name: string;
             price: number;
             duration: number;
             level: import(".prisma/client").$Enums.CourseLevel | null;
             isActive: boolean;
+            createdAt: Date;
+            updatedAt: Date;
+            id: number;
         };
     }>;
     remove(id: string): Promise<{

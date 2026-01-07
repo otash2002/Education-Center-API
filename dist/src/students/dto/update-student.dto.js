@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateStudentDto = void 0;
+const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
 class UpdateStudentDto {
     firstName;
@@ -21,33 +22,64 @@ class UpdateStudentDto {
 }
 exports.UpdateStudentDto = UpdateStudentDto;
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Asadbek',
+        description: 'Talabaning ismini yangilash',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateStudentDto.prototype, "firstName", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Olimov',
+        description: 'Talabaning familiyasini yangilash',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateStudentDto.prototype, "lastName", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: '+998911234567',
+        description: 'Yangi telefon raqami',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsPhoneNumber)('UZ'),
     __metadata("design:type", String)
 ], UpdateStudentDto.prototype, "phone", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'Toshkent sh., Yunusobod tumani',
+        description: 'Yangi yashash manzili',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateStudentDto.prototype, "address", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: '2008-05-20',
+        description: 'Tug‘ilgan sanani tuzatish (YYYY-MM-DD)',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsDateString)(),
     __metadata("design:type", String)
 ], UpdateStudentDto.prototype, "birthDate", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        example: 'active',
+        enum: ['active', 'inactive', 'graduated'],
+        description: 'Talabaning joriy holati',
+        required: false
+    }),
     (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsEnum)(['active', 'inactive', 'graduated']),
     __metadata("design:type", String)
 ], UpdateStudentDto.prototype, "status", void 0);
 //# sourceMappingURL=update-student.dto.js.map
