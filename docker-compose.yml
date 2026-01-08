@@ -25,6 +25,7 @@ services:
       - postgres
     ports:
       - "3005:3000"
+      - "5555:5555"
     networks:
       - education_network
 
